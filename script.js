@@ -1,32 +1,25 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     var totalAmountCell = document.querySelector('#data-table tbody tr:last-child td:last-child');
-    
-//     // Function to calculate total amount
-//     function calculateTotalAmount() {
-//         var totalAmount = 0;
-//         var dataRows = document.querySelectorAll('#data-table tbody tr:not(:last-child)');
-//         dataRows.forEach(function (row) {
-//             var amountCell = row.querySelector('td:last-child');
-//             var amount = parseFloat(amountCell.textContent);
-//             if (!isNaN(amount)) {
-//                 totalAmount += amount;
-//             }
-//         });
-//         totalAmountCell.textContent = totalAmount.toFixed(2);
-//     }
+const toggleButton = document.getElementById('theme-toggle');
 
-//     // Trigger calculation on input
-//     var dataRows = document.querySelectorAll('#data-table tbody tr:not(:last-child)');
-//     dataRows.forEach(function (row) {
-//         var inputCell = row.querySelector('td:last-child');
-//         inputCell.addEventListener('input', calculateTotalAmount);
-//     });
+toggleButton.addEventListener('click', toggleTheme);
 
-//     // Add value on click
-//     totalAmountCell.addEventListener('click', function () {
-//         var newValue = prompt('Enter value:');
-//         if (newValue !== null && !isNaN(newValue)) {
-//             totalAmountCell.textContent = parseFloat(newValue).toFixed(2);
-//         }
-//     });
-// });
+function toggleTheme() {
+  document.body.classList.toggle('dark-theme');
+  const tableHeaders = document.querySelectorAll('th');
+  const box = document.querySelector('.box');
+
+  // Handle table headers (optional):
+  tableHeaders.forEach(header => {
+    if (document.body.classList.contains('dark-theme')) {
+      header.style.backgroundColor = '#222';
+      header.style.color = '#fff';
+    } else {
+      header.style.backgroundColor = 'white';
+      header.style.color = '#000';
+    }
+  });
+
+  // Update box outer glow based on theme:
+  box.style.boxShadow = document.body.classList.contains('dark-theme')
+    ? '0 0 10px 5px rgba(255, 255, 255, 0.5)' // White outer glow for dark mode
+    : '0 0 10px 5px rgba(0, 0, 0, 0.5)'; // Black outer glow for light mode
+}
