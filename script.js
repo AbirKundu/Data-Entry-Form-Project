@@ -17,9 +17,5 @@ function toggleTheme() {
       header.style.color = '#000';
     }
   });
-
-  // Update box outer glow based on theme:
-  box.style.boxShadow = document.body.classList.contains('dark-theme')
-    ? '0 0 10px 5px rgba(255, 255, 255, 0.5)' // White outer glow for dark mode
-    : '0 0 10px 5px rgba(0, 0, 0, 0.5)'; // Black outer glow for light mode
 }
+  
