@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Entry Form</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th {
+      background-color: #ffffff;
+      font-weight: bold;
+      padding: 10px;
+
+      border: 1px solid #fe0000;
+      text-align: center;
+    }
+    
+    td {
+      padding: 10px;
+      border: 1px solid #000000;
+      text-align: left;
+    }
+    tr:nth-child(12) td {
+      text-align: center;
+    }
+
+    p{
+        text-align: left;
+    }
+    
+  </style>
+</head>
+<body>
+    <script src="script.js" ></script>
+    <h1><center>বাংলাদেশ ইউনিভার্সিটি অফ প্রফেশনালস্</center></h1>
+  
+
+    <center><img src="bbp.png" height="100"</center><br>
+    <table id="data-table">
+      <thead> 
+      <div class="table_component" role="region" tabindex="0">
+        <table>
+            <!-- <caption>DeMo Table</caption> -->
+            <h4><b> (পরীক্ষার ফল প্রকাশের এক বৎসরের মধ্যে নির্দিষ্ট বিভাগীয় পরীক্ষা পরিষদের সভাপতির মাধ্যমে পরীক্ষা নিয়ন্ত্রকের অফিসে পরিশ্রমিকের বিল পেশ করতে হইবে )। </b></h4>
+
+            <text-align:left>নাম:<input type="text" id="Name" placeholder="Enter Name"><br> 
+            পদবি সহকারে ঠিকানা: .............................................................................................................................................................................................<br>
+            ............................. সনের ................................................. পরীক্ষাসমূহের কাজের জন্যে আমার পারিশ্রমিকের দাবীসমূহ নিম্নে সন্নিবেশিত হইল : </p>
+            <thead>
+              <tr>
+                  <th>ক্রমিক নং</th>
+                  <th>বিষয়</th>
+                  <th>কাজের বিবরণ</th>
+                  <th>বিলের পরিমাণ</th>
+              </tr>
+          </thead>
+          
+          <tr>
+            <td>১ ।&nbsp;</td>
+            <td>প্রশ্নপত্র প্রণয়ন&nbsp;</td>
+            <td>ক। <input type="text" id="billAmount1" placeholder="Enter Course Name"> কোর্সের <input type="number" id="billAmount1" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="billAmount1">)<br>
+            খ। <input type="text" id="billAmount1" placeholder="Enter Course Name"> কোর্সের <input type="number" id="billAmount1" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="billAmount1">)<br>
+            গ। <input type="text" id="billAmount1" placeholder="Enter Course Name"> কোর্সের <input type="number" id="billAmount1" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="billAmount1">)<br>
+            ঘ ।<input type="text" id="billAmount1" placeholder="Enter Course Name"> কোর্সের <input type="number" id="billAmount1" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="billAmount1">)<br></td>
+            <td><input type="number" id="Total" placeholder="Total"></td>
+        </tr>
+        
+                    <td>২।&nbsp;</td>
+                    <td>মডারেশন</td>
+                    <td>কোড নং <input type="text" id="Code No" placeholder="Enter Code Name"<br>সর্বমোট <input type="number"id="Total Subject" placeholder="Enter Number">টি বিষয়&nbsp;</td>
+                    <td><input type="number" id="Total" placeholder="Total"></td>
+                </tr>
+                <tr>
+                    <td>৩।&nbsp;</td>
+                    <td>উত্তরপত্র মূল্যায়ন&nbsp;</td>
+                    <td>ক। <input type="text" id="billAmount1" placeholder="Enter Course Name"> কোর্সের <input type="number" id="billAmount1" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="billAmount1" placeholder="">)<br>
+                      খ। <input type="text" id="billAmount1" placeholder="Enter Course Name"> কোর্সের <input type="number" id="billAmount1" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="billAmount1" placeholder="">)
+                      গ। <input type="text" id="billAmount1" placeholder="Enter Course Name"> কোর্সের <input type="number" id="billAmount1" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="billAmount1" placeholder="">)<br>
+                      ঘ। <input type="text" id="billAmount1" placeholder="Enter Course Name"> কোর্সের <input type="number" id="billAmount1" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="billAmount1" placeholder="">)</td>
+                         <td><input type="number" id="Total" placeholder="Total"></td>
+                </tr>
+                <tr>
+                  <td>8।&nbsp;<br></td>
+                  <td>ইনকোর্স / ক্লাস টেস্ট পরীক্ষা সমূহ&nbsp;</td>
+                  <td>ক। <input type="text" id="Course Name" placeholder="Enter Course Name"> কোর্সের <input type="number" placeholder="Enter Number"> টি পরীক্ষা শিক্ষার্থীর সংখ্য়া (<input type="number" placeholder="Enter number">) জন <br>
+                  খ। <input type="text" id="Course Name" placeholder="Enter Course Name"> কোর্সের <input type="number" placeholder="Enter Number"> টি পরীক্ষা শিক্ষার্থীর সংখ্য়া (<input type="number" placeholder="Enter number">) জন </td>
+                  <td><input type="number" id="Total" placeholder="Total"></td>
+              </tr>
+              <tr>
+                  <td>৫।</td>
+                  <td>&nbsp;টিউটেরিয়াল / মিড টার্ম পরীক্ষা সমূহ&nbsp;</td>
+                  <td>ক।  <input type="text" id="Course Name" placeholder="Enter Course Name"> কোর্সের<input type="number" placeholder="Enter Number"> টি পরীক্ষা শিক্ষার্থীর সংখ্য়া (<input type="number" placeholder="Enter number">) জন<br>
+                  
+                   খ। <input type="text" id="Course Name" placeholder="Enter Course Name"> কোর্সের<input type="number" placeholder="Enter Number"> টি পরীক্ষা শিক্ষার্থীর সংখ্য়া (<input type="number" placeholder="Enter number">) জন</td>
+                   <td><input type="number" id="Total" placeholder="Total"></td>
+              </tr>
+              <tr>
+                  <td>৬.&nbsp;</td>
+                  <td>ব্যবহারিক পরীক্ষা&nbsp;</td>
+                  <td>ক।.....................কোর্সের.................জন শিক্ষার্থীর জন্য মোট (..................................) দিন <br>খ।&nbsp;.....................কোর্সের.................জন শিক্ষার্থীর জন্য মোট (..................................) দিন &nbsp;</td>
+                  <td><input type="number" id="Total" placeholder="Total"></td>
+              </tr>
+              <tr>
+                  <td>৭.&nbsp;</td>
+                  <td>মৌখিক পরীক্ষা&nbsp;</td>
+                  <td>ক।<input type="text" id="Course Name" placeholder="Enter Course Name"> কোর্সের <input type="number" placeholder="Enter Number"> জন শিক্ষার্থীর জন্য মোট (<input type="number" placeholder="Enter Number">) দিন <br>
+                    খ।<input type="text" id="Course Name" placeholder="Enter Course Name"> কোর্সের <input type="number" placeholder="Enter Number"> জন শিক্ষার্থীর জন্য মোট (<input type="number" placeholder="Enter Number">) দিন <br>
+                      গ।<input type="text" id="Course Name" placeholder="Enter Course Name"> কোর্সের <input type="number" placeholder="Enter Number"> জন শিক্ষার্থীর জন্য মোট (<input type="number" placeholder="Enter Number">) দিন <br>
+                        ঘ।<input type="text" id="Course Name" placeholder="Enter Course Name"> কোর্সের <input type="number" placeholder="Enter Number"> জন শিক্ষার্থীর জন্য মোট (<input type="number" placeholder="Enter Number">) দিন <br>
+                    </td>
+                  <td><input type="number" id="Total" placeholder="Total"></td>
+              </tr>
+              <tr>
+                  <td>৮.&nbsp;</td>
+                  <td>টেবুলেশন&nbsp;</td>
+                  <td>ক।................................................................................................&nbsp;<br>
+                      খ।................................................................................................&nbsp;&nbsp;<br>
+                      গ।................................................................................................&nbsp;</td>
+                  <td><input type="number" id="Total" placeholder="Total"></td>
+              </tr>
+              <tr>
+                  <td>৯.&nbsp;</td>
+                  <td>উত্তর পত্র নিরীক্ষা&nbsp;</td>
+                  <td>ক।.....................কোর্সের.................বিষয়ে মোট ............................. টি খাতা&nbsp;<br>খ।.....................কোর্সের.................বিষয়ে মোট ............................. টি খাতা<br>গ।.....................কোর্সের.................বিষয়ে মোট ............................. টি খাতা<br></td>
+                  <td><input type="number" id="Total" placeholder="Total">;</td>
+              </tr>
+              <tr>
+                  <td>১০.&nbsp;</td>
+                  <td>থিসিস /প্রজেক্ট। টার্ম পেপার / ডিজারটেশন&nbsp;</td>
+                  <td>ক।.....................কোর্সের.................<br>জন শিক্ষার্থীর একটি ব্যাচ&nbsp;<br>খ। .....................কোর্সের.................টি পরীক্ষা শিক্ষার্থীর সংখ্য়া (..................................) জন </td>
+                  <td><input type="number" id="Total" placeholder="Total"></td>
+              </tr>
+              <tr>
+                  <td>১১.&nbsp;</td>
+                  <td>অন্যান্য&nbsp;</td>
+                  <td>ক।.................................................<br>খ। .................................................&nbsp;</td>
+                  <td><input type="number" id="Total" placeholder="Total"></td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <center><td><b>মোট টাকার পরিমাণ</b></td></center>
+                <td>  <input type="number" id="Total" placeholder="Total">  </td>
+              </tr>
+            </tbody>
+        </table>
+        <p>ডাকমাশুল এবং সংশ্লিষ্ট নথি পত্র ও অন্যান্য বিবিধ খরচের রশিদ বিলের সহিত সংযুক্ত না থাকিলে উহা পরিশোধযোগ্য বলিয়া গণ্য হইবে না  <br>
+        প্রত্যয়ন করা যাইতেছে যে বর্ণিত ব্যক্তি উপরোক্ত কর্ম সম্পন্ন করেছেন এবং অত্র বিলের টাকা পূর্বে গ্রহণ করেন নাই । 
+    <pre>                                                                                                         .........................
+                                                                                                            প্রাপকের স্বাক্ষর ও তারিখ <br>
+                                                                                                            বর্তমান ঠিকানা:______________________
+    </pre></p>
+    <p>ড:/জনাব : ----------------------------------------------------------------------------- (অংকে) টাকা --------------------------------------<br>
+    (কথায়) টাকা -------------------------------------------------------------------------------------------------- মাত্র দেওয়া যাইতে পারে। </p>
+    </div>
+  
+</body>
+</html>
