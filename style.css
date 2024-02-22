@@ -1,22 +1,78 @@
-thead {
-    text-align: center;
-}
-
-th {
-    padding: 10px; /* Adjust as needed */
-}
-
+/* Set margin to auto to center the table horizontally */
 table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-  }
-  th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-  }
-   
+  margin: auto;
+  border-collapse: collapse; /* Collapse the borders of table cells */
+  width: 90%; /* Set the width of the table */
+  box-shadow: 0 0 10px rgb(0, 0, 0); /* Apply outer glow effect */
+}
+
+/* Style for table header cells */
+th {
+  background-color: #ffffff; /* Background color for header cells */
+  font-weight: bold; /* Bold font for header cells */
+  padding: 10px; /* Padding for header cells */
+  border: 1px solid #ff0000; /* Border color and style for header cells */
+  text-align: center; /* Center align text within header cells */
+}
+
+/* Style for table data cells */
+td {
+  padding: 10px; /* Padding for data cells */
+  border: 1px solid #000000; /* Border color and style for data cells */
+  text-align: left; /* Left align text within data cells */
+}
+
+tr:hover{background-color: deepskyblue;} /*Hovering on the table Row
+  
+
+
+/* Center align text in data cells of the 12th row */
+tr:nth-child(12) td {
+  text-align: center;
+}
+
+/* Set text alignment to left for paragraphs */
+
+/* p {
+  text-align: center;
+} */
+
+/* Set text alignment to right for elements with class align-right */
+.align-right {
+  text-align: right;
+}
+
+/* Base styling for the body */
+body {
+  background-color: #ffffff; /* Background color for the body */
+  color: #333; /* Text color for the body */
+}
+
+/* Dark theme */
+.dark-theme {
+  background-color: #333; /* Background color for dark theme */
+  color: #f5f5f5; /* Text color for dark theme */
+}
+
+/* Positioning for the theme toggle */
+#theme-toggle {
+  position: absolute; /* Position element absolutely */
+  top: 20px; /* Position from the top */
+  right: 20px; /* Position from the right */
+}
+
+
+.signature-line {
+  margin:auto;
+  display:flex; /* Use flexbox layout */
+}
+
+.signature {
+  
+  margin: 10%; /* Add margin between signatures */
+}
+
+/* .signature img {
+  width: 100px; /* Adjust image width as needed */
+ /* height: auto; }/* Maintain aspect ratio */
+
