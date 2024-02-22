@@ -31,6 +31,34 @@
     p{
         text-align: left;
     }
+    body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Dark theme */
+        .dark-theme {
+            background-color: #333;
+            color: #f5f5f5;
+        }
+    
+  </style>
+
+<button id="theme-toggle" onclick="toggleTheme()">Light Mode</button>
+
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    function toggleTheme() {
+        document.body.classList.toggle('dark-theme');
+
+        if (document.body.classList.contains('dark-theme')) {
+            toggleButton.textContent = 'Light Mode';
+        } else {
+            toggleButton.textContent = 'Dark Mode';
+        }
+    }
+  
+</script>
     
   </style>
 </head>
