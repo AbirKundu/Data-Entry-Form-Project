@@ -18,4 +18,21 @@ function toggleTheme() {
     }
   });
 }
-  
+function loadSignature(event) {
+    var input = event.target;
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            var signature = input.parentNode.querySelector('p');
+            signature.style.backgroundImage = "url('" + e.target.result + "')";
+            signature.style.backgroundSize = "cover";
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+function redirectToCredit() {
+  window.location.href = 'index3.html';
+}
