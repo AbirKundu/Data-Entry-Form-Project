@@ -33,9 +33,9 @@ function loadSignature(event) {
         reader.readAsDataURL(input.files[0]);
     }
 }
-function redirectToCredit() {
-  window.location.href = 'index3.html';
-}
+// function redirectToCredit() {
+//   window.location.href = 'index3.html';
+// }
 
 
 function exportToExcel() {
