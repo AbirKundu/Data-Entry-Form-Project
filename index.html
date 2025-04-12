@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Entry Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+
+</head>
+<body>
+  <!-- Buttons for Credits and Theme Toggle -->
+  <!-- <button onclick="redirectToCredit()">Credits</button> -->
+  <button id="theme-toggle" onclick="toggleTheme()">
+    <img id="theme-icon" src="R.png"  height="30px" alt="Change Theme">
+  </button>
+  
+  <!-- Input fields for data entry -->
+  <p class="bcn" id="bil">বিলের ক্রমিক নং: <input type="number" id"bil1-serial-no" min="0" placeholder="Bil Serial No"></p>
+  <p class="bcn" id="bil">ব্যাংক হিসাব নং :<input type="number" id"bank-account-no" min="0" placeholder="Bil Serial No"></p>
+  <p class="bcn" id="bil">রাউটিং নং: <input type="number" id"routing-no" min="0" placeholder="Bil Serial No"></p>
+  <p class="bcn" id="bil">ব্যাংকের নাম :<input type="text" id"name-of-bank" placeholder="Bil Serial No"></p>
+  <p class="bcn" id="bil"> শাখা : <input type="number" id"bil1" min="0" placeholder="Bil Serial No"></p>
+
+  <!-- Heading -->
+  <h1><center><br>বাংলাদেশ ইউনিভার্সিটি অফ প্রফেশনালস্</center></h1>
+
+  <!-- University Logo -->
+  <center><a href="https://bup.edu.bd/" target="_blank"><img src="bbp.png" alt="BUP" height="150"></a></center>
+
+  <!-- Data Table -->
+  <table id="toExcel" class="uitable">
+    <thead> 
+      <div class="table_component" role="region" tabindex="0">
+        <table>
+          
+          <center><h4><b> (পরীক্ষার ফল প্রকাশের এক বৎসরের মধ্যে নির্দিষ্ট বিভাগীয় পরীক্ষা পরিষদের সভাপতির মাধ্যমে পরীক্ষা নিয়ন্ত্রকের অফিসে পরিশ্রমিকের বিল পেশ করতে হইবে )। </b></h4></center>
+          <text-align:left>নাম:<input type="text" id="Name" placeholder="Enter Name"> পদবি সহকারে ঠিকানা: <input type="text" placeholder="পদবী সহকারে ঠিকানা"> সনের <input type="number" min="2008" placeholder="Enter Year">পরীক্ষাসমূহের কাজের জন্যে আমার পারিশ্রমিকের দাবীসমূহ নিম্নে সন্নিবেশিত হইল : </p>
+          <br>
+          </thead>
+          <tr>
+            <th>ক্রমিক নং</th>
+            <th>বিষয়</th>
+            <th>কাজের বিবরণ</th>
+            <th>বিলের পরিমাণ</th>
+          </tr>
+        </thead>
+        <!-- Table Body -->
+        <tbody>
+          <!-- Row 1 -->
+          <tr>
+            <td>১ ।&nbsp;</td>
+            <td>প্রশ্নপত্র প্রণয়ন&nbsp;</td>
+            <td>
+                ক। <input type="text" id="courseName1" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num1" min="0" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="input1">)<br>
+                খ। <input type="text" id="courseName1" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num1" min="0" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="input1">)<br>
+                গ। <input type="text" id="courseName1" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num1" min="0" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="input1">)<br>
+                ঘ। <input type="text" id="courseName1" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num1" min="0" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="input1">)<br>
+            </td>
+            <td><input type="number" id="total1" placeholder="Total"></td>
+          </tr>
+          <tr>
+            <td>২।&nbsp;</td>
+            <td>মডারেশন</td>
+            <td>
+                কোড নং <input type="text" id="codeNo" placeholder="Enter Code Name"> <br>
+                সর্বমোট <input type="number" id="totalSubject" min="0" placeholder="Enter Number"> টি বিষয়&nbsp;
+            </td>
+            <td><input type="number" id="total2" placeholder="Total"></td>
+    </tr>
+    
+    <tr>
+          <td>৩।&nbsp;</td>
+          <td>উত্তরপত্র মূল্যায়ন&nbsp;</td>
+          <td>
+            ক। <input type="text" id="courseName2" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num2" min="0" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="input2" placeholder="">)<br>
+            খ। <input type="text" id="courseName2" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num2" min="0" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="input2" placeholder="">)<br>
+            গ। <input type="text" id="courseName2" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num2" min="0" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="input2" placeholder="">)<br>
+            ঘ। <input type="text" id="courseName2" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num2" min="0" placeholder="Enter Number"> টি পূর্ণ/অর্ধ পত্র (<input type="text" id="input2" placeholder="">)<br>
+          </td>
+         <td><input type="number" id="total3" placeholder="Total"></td>
+    </tr>
+    
+    <tr>
+          <td>8।&nbsp;<br></td>
+          <td>ইনকোর্স / ক্লাস টেস্ট পরীক্ষা সমূহ&nbsp;</td>
+          <td>
+              ক। <input type="text" id="courseName3" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num3" min="0" placeholder="Enter Number"> টি পরীক্ষা শিক্ষার্থীর সংখ্য়া (<input type="number" id="totalStudent1" min="0" placeholder="Enter number">) জন <br>
+              খ। <input type="text" id="courseName3" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num3" min="0" placeholder="Enter Number"> টি পরীক্ষা শিক্ষার্থীর সংখ্য়া (<input type="number" id="totalStudent1" min="0" placeholder="Enter number">) জন <br>
+          </td>
+        <td><input type="number" id="total4" placeholder="Total"></td>
+    </tr>
+    
+    <tr>
+          <td>৫।</td>
+          <td>&nbsp;টিউটেরিয়াল / মিড টার্ম পরীক্ষা সমূহ&nbsp;</td>
+          <td>
+              ক। <input type="text" id="courseName4" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num4" min="0" placeholder="Enter Number"> টি পরীক্ষা শিক্ষার্থীর সংখ্য়া (<input type="number" id="totalStudent2" min="0" placeholder="Enter number">) জন<br>
+              খ। <input type="text" id="courseName3" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num3" min="0" placeholder="Enter Number"> টি পরীক্ষা শিক্ষার্থীর সংখ্য়া (<input type="number" id="totalStudent1" min="0" placeholder="Enter number">) জন <br>
+          </td>
+        <td><input type="number" id="total5" placeholder="Total"></td>
+    </tr>
+    
+    <tr>
+          <td>৬। </td>
+          <td>ব্যবহারিক পরীক্ষা&nbsp;</td>
+          <td>
+              ক। <input type="text" id="courseName5" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num5" min="0" placeholder="Enter Number"> জন শিক্ষার্থীর জন্য মোট (<input type="number" id="totalDays1" min="0" placeholder="Enter Number">) দিন <br>
+              খ। <input type="text" id="courseName5" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num5" min="0" placeholder="Enter Number"> জন শিক্ষার্থীর জন্য মোট (<input type="number" id="totalDays1" min="0" placeholder="Enter Number">) দিন <br>
+        </td>
+        <td><input type="number" id="total6" placeholder="Total"></td>
+    </tr>
+    
+    <tr>
+          <td>৭। </td>
+          <td>মৌখিক পরীক্ষা</td>
+          <td>
+              ক। <input type="text" id="courseName6" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num6" min="0" placeholder="Enter Number"> জন শিক্ষার্থীর জন্য মোট (<input type="number" id="totalDays2" min="0" placeholder="Enter Number">) দিন <br>
+              খ। <input type="text" id="courseName6" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num6" min="0" placeholder="Enter Number"> জন শিক্ষার্থীর জন্য মোট (<input type="number" id="totalDays2" min="0" placeholder="Enter Number">) দিন <br>
+              গ। <input type="text" id="courseName6" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num6" min="0" placeholder="Enter Number"> জন শিক্ষার্থীর জন্য মোট (<input type="number" id="totalDays2" min="0" placeholder="Enter Number">) দিন <br>
+              ঘ। <input type="text" id="courseName6" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num6" min="0" placeholder="Enter Number"> জন শিক্ষার্থীর জন্য মোট (<input type="number" id="totalDays2" min="0" placeholder="Enter Number">) দিন <br>
+          </td>
+        <td><input type="number" id="total7" placeholder="Total"></td>
+    </tr>
+    
+    <tr>
+          <td>৮। </td>
+          <td>টেবুলেশন</td>
+          <td>
+              ক। <input type="text" id="courseName7" placeholder="Enter Text "><br>
+              গ। <input type="text" id="courseName7" placeholder="Enter Text "><br>
+              ঘ। <input type="text" id="courseName7" placeholder="Enter Text "><br>
+          </td>
+          <td><input type="number" id="total8" placeholder="Total"></td>
+    </tr>
+    
+    <tr>
+          <td>৯। </td>
+          <td>উত্তর পত্র নিরীক্ষা</td>
+          <td>
+              ক। <input type="text" id="courseName8" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num7" min="0" placeholder="Enter Number"> বিষয়ে মোট <input type="number" id="totalTopics1" min="0" placeholder="Enter Number"> টি খাতা <br>
+              খ। <input type="text" id="courseName8" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num7" min="0" placeholder="Enter Number"> বিষয়ে মোট <input type="number" id="totalTopics1" min="0" placeholder="Enter Number"> টি খাতা <br>
+              গ। <input type="text" id="courseName8" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num7" min="0" placeholder="Enter Number"> বিষয়ে মোট <input type="number" id="totalTopics1" min="0" placeholder="Enter Number"> টি খাতা <br>
+          </td>
+          <td><input type="number" id="total9" placeholder="Total"></td>
+    </tr>
+    
+    <tr>
+          <td>১০। </td>
+          <td>থিসিস /প্রজেক্ট। টার্ম পেপার / ডিজারটেশন</td>
+          <td>
+              ক। <input type="text" id="courseName9" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num8" min="0" placeholder="Enter Number"> জন শিক্ষার্থীর একটি ব্যাচ<br>
+              খ। <input type="text" id="courseName3" placeholder="Enter Course Name"> কোর্সের <input type="number" id="num3" min="0" placeholder="Enter Number"> টি পরীক্ষা শিক্ষার্থীর সংখ্য়া (<input type="number" id="totalStudent1" min="0" placeholder="Enter number">) জন <br>
+            </td>
+          <td><input type="number" id="total10" placeholder="Total"></td>
+    </tr>
+    
+    <tr>
+          <td>১১। </td>
+          <td>অন্যান্য</td>
+          <td>
+            ক। <input type="text" id="courseName10" placeholder="Enter Text "><br>
+          </td>
+          <td><input type="number" id="total11" placeholder="Total"></td>
+    </tr>
+    
+
+          <tr>
+            <td>-</td>
+            <td>-</td>
+            <center><td><b>মোট টাকার পরিমাণ</b></td>
+            </center>
+            <td><input type="number" id="Total" placeholder="Total"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </table>
+  <br><center><button onclick="exportToExcel()">Export to Excel</button>  </center>
+
+</body>
+</html>
+
+ 
+
